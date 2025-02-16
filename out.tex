@@ -1,0 +1,210 @@
+% !TeX spellcheck = en_GB
+% !TeX program = pdflatex
+%
+% LuxSleek-CV 1.1 LaTeX template
+% Author: Andreï V. Kostyrka, University of Luxembourg
+%
+% 1.1: added tracking and letter-spacing for prettier lower caps, added `~` for language levels
+% 1.0: initial release
+%
+% This template fills the gap in the available variety of templates
+% by proposing something that is not a custom class, not using any
+% hard-coded settings deeply hidden in style files, and provides
+% a handful of custom command definitions that are as transparent as it gets.
+% Developed at the University of Luxembourg.
+%
+% *NOTHING IS HARCODED, and never should be.*
+%
+% Target audience: applicants in the IT industry, or business in general
+%
+% The main strength of this template is, it explicitly showcases how
+% to break the flow of text to achieve the most flexible right alignment
+% of dates for multiple configurations.
+
+\documentclass[11pt, a4paper]{article} 
+
+\usepackage[T1]{fontenc}     % We are using pdfLaTeX,
+\usepackage[utf8]{inputenc}  % hence this preparation
+\usepackage[british]{babel}  
+\usepackage[left = 0mm, right = 0mm, top = 0mm, bottom = 0mm]{geometry}
+\usepackage[stretch = 25, shrink = 25, tracking=true, letterspace=30]{microtype}  
+\usepackage{graphicx}        % To insert pictures
+\usepackage{xcolor}          % To add colour to the document
+\usepackage{marvosym}        % Provides icons for the contact details
+
+\usepackage{enumitem}        % To redefine spacing in lists
+\setlist{parsep = 0pt, topsep = 0pt, partopsep = 1pt, itemsep = 1pt, leftmargin = 6mm}
+
+\usepackage{FiraSans}        % Change this to use any font, but keep it simple
+\renewcommand{\familydefault}{\sfdefault}
+
+\definecolor{cvblue}{HTML}{2C3F54}
+
+%%%%%%% USER COMMAND DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%%%%%
+% These are the real workhorses of this template
+\newcommand{\dates}[1]{\hfill\mbox{#1}} % Bold stuff that doesn’t got broken into lines
+\newcommand{\is}{\par\vskip.5ex plus .4ex} % Item spacing
+\newcommand{\smaller}[1]{{\small$\empty$\ #1}}
+\newcommand{\headleft}[1]{\vspace*{2ex}\textsc{\textbf{\textbf{#1}}}\par%
+    \vspace*{-1.5ex}\hrulefill\par\vspace*{0.7ex}}
+\newcommand{\headright}[1]{\vspace*{2.5ex}\textsc{\Large\color{cvblue}#1}\par%
+     \vspace*{-2ex}{\color{cvblue}\hrulefill}\par}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[colorlinks = true, urlcolor = white, linkcolor = white]{hyperref}
+
+\begin{document}
+
+% Style definitions -- killing the unnecessary space and adding the skips explicitly
+\setlength{\topskip}{0pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\fboxsep}{0pt}
+\pagestyle{empty}
+\raggedbottom
+
+\begin{minipage}[t]{0.33\textwidth} %% Left column -- outer definition
+%  Left column -- top dark rectangle
+\colorbox{cvblue}{\begin{minipage}[t][5mm][t]{\textwidth}\null\hfill\null\end{minipage}}
+
+\vspace{-.2ex} % Eliminates the small gap
+\colorbox{cvblue}{\color{white}  %% LEFT BOX
+\kern0.09\textwidth\relax% Left margin provided explicitly
+\begin{minipage}[t][293mm][t]{0.82\textwidth}
+\raggedright
+\vspace*{2.0ex}
+\begin{center}
+  \Large Friedrich Mice
+\end{center}
+\normalsize 
+
+% Centering without extra vertical spacing
+\null\hfill\includegraphics[width=0.7\textwidth]{resumeow.jpg}\hfill\null
+
+\vspace*{0.1ex} % Extra space after the picture
+
+\headleft{profil}
+\begin{itemize}
+	\item Metaphysical programmer and architect of digital chaos.
+	\item Expert in deconstructing systems and reinventing them according to the will to power.
+	\item Currently a free thinker and relentless critic of modern cybersecurity.
+\end{itemize}
+
+\headleft{wünsche}
+\begin{itemize}
+	\item I seek a position that does not reduce me to a mere cog in the system.
+	\item I want to shape new software architectures free from the morality of mediocre code.
+	\item I desire to work with individuals capable of staring into the abyss of debugging without fearing the reflection.
+\end{itemize}
+
+\headleft{sprachen}
+\begin{itemize}
+	\item Native German
+	\item Fluent French (with disdain for imposed syntax)
+	\item Python, the language beyond good and mostly evil
+\end{itemize}
+
+\headleft{kontakte}
+\small % To fit more content
+\MVAt\ {\small nietzsche.uberprog@willtopower.dev} \\[0.4ex]
+\Mobilefone\ +49\,420\,000\,0000 \\[0.4ex]
+\Mundus\ \href{https://github.com/ubermenschCode}{GitHub: überCode} \\[0.4ex]
+\Mundus\ \href{https://www.linkedin.com/in/nietzsche-dev/}{LinkedIn: Friedrich 'Segfault' Nietzsche} \\[0.4ex]
+
+\normalsize
+
+
+\end{minipage}%
+\kern0.09\textwidth\relax%%Right margin provided explicitly to stretch the colourbox
+}
+\end{minipage}% Right column
+\hskip2.5em% Left margin for the white area
+\begin{minipage}[t]{0.56\textwidth}
+\setlength{\parskip}{0.8ex}% Adds spaces between paragraphs; use \\ to add new lines without this space. Shrink this amount to fit more data vertically
+
+\vspace{2ex}
+
+\headright{schlüsselkompetenzen}
+	\textsc{Creative Destruction}\\
+	\vspace{0.75em}
+	\hspace*{2em}\smaller{\begin{minipage}[t]{\dimexpr\textwidth-2em\relax}Every system must be annihilated before it can be rewritten in a superior form. The refactoring process is not merely about optimization; it is an existential transformation. Only by tearing down outdated paradigms can true innovation emerge. Anything less is stagnation.\end{minipage}}
+	\textsc{Automation of the Will}\\
+	\vspace{0.75em}
+	\hspace*{2em}\smaller{\begin{minipage}[t]{\dimexpr\textwidth-2em\relax}The strong do not waste time on repetitive tasks. I develop automation tools that liberate engineers from the shackles of mundane labor, allowing them to focus on higher-order thinking. An efficient system is one that runs itself, evolving continuously without human frailty interfering.\end{minipage}}
+	\textsc{Applied Dionysian Thought}\\
+	\vspace{0.75em}
+	\hspace*{2em}\smaller{\begin{minipage}[t]{\dimexpr\textwidth-2em\relax}The rigid, structured approach to programming is a relic of an obsolete mindset. I embrace chaos as a force of creation, allowing intuition to guide development. Code must be alive, dynamic, and unconstrained by dogmatic principles. Through disciplined anarchy, true breakthroughs are achieved.\end{minipage}}
+	\textsc{Cybersecurity}\\
+	\vspace{0.75em}
+	\hspace*{2em}\smaller{\begin{minipage}[t]{\dimexpr\textwidth-2em\relax}Security is an illusion for those who refuse to see the inevitable entropy of all systems. I dissect security models not to defend, but to expose their flaws, ensuring they are rebuilt stronger. A system is only as secure as its ability to survive its own vulnerabilities.\end{minipage}}
+	\textsc{Algorithms of Fate}\\
+	\vspace{0.75em}
+	\hspace*{2em}\smaller{\begin{minipage}[t]{\dimexpr\textwidth-2em\relax}Predicting software failure is an art and a science. Through deep analysis and philosophical inquiry, I craft models that foresee the collapse of systems before they happen. To understand failure is to understand existence itself—an inevitability to be embraced, not feared.\end{minipage}}
+	\textsc{Existential Debugging}\\
+	\vspace{0.75em}
+	\hspace*{2em}\smaller{\begin{minipage}[t]{\dimexpr\textwidth-2em\relax}Debugging is not merely a technical process but a confrontation with the abyss. To debug is to confront the infinite recursion of human error, exposing the fragile nature of code and its creators.\end{minipage}}
+	\textsc{Übermensch Code Review}\\
+	\vspace{0.75em}
+	\hspace*{2em}\smaller{\begin{minipage}[t]{\dimexpr\textwidth-2em\relax}Reviewing code is a moral imperative. Mediocrity must be eradicated, and only the strongest functions should survive. I refactor with a hammer, forging code that stands beyond good and evil.\end{minipage}}
+
+
+\headright{übergreifende kompetenzen}
+	\textsc{Vision Beyond the Bug}\\
+	\vspace{0.75em}
+	\hspace*{2em}\smaller{\begin{minipage}[t]{\dimexpr\textwidth-2em\relax}The ability to grasp the true essence of the problem beyond its immediate manifestation.\end{minipage}}
+	\textsc{Ruthless Critique}\\
+	\vspace{0.75em}
+	\hspace*{2em}\smaller{\begin{minipage}[t]{\dimexpr\textwidth-2em\relax}Mediocre code must be faced with the hammer, not with refactoring.\end{minipage}}
+	\textsc{Resilience to Frustration}\\
+	\vspace{0.75em}
+	\hspace*{2em}\smaller{\begin{minipage}[t]{\dimexpr\textwidth-2em\relax}Eternal debugging as a metaphor for the human condition.\end{minipage}}
+
+
+\end{minipage}
+
+%codice per fascia laterale piccola blu
+\begin{minipage}[t]{0.1\textwidth} %% Left column -- outer definition
+%  Left column -- top dark rectangle
+\colorbox{cvblue}{\color{white}  %% LEFT BOX
+\kern0.09\textwidth\relax\begin{minipage}[t][300mm][t]{\textwidth}\null\hfill\null\end{minipage}}
+\vspace{-0.2ex} % Eliminates the small gap
+\colorbox{cvblue}{\color{white}  %% LEFT BOX
+\kern0.09\textwidth\relax% Left margin provided explicitly
+\kern0.09\textwidth\relax%%Right margin provided explicitly to stretch the colourbox
+}
+\end{minipage}% Right column
+\hskip2.5em% Left margin for the white area
+\begin{minipage}[t]{0.782\textwidth}
+\setlength{\parskip}{0.8ex}% Adds spaces between paragraphs; use \\ to add new lines without this space. Shrink this amount to fit more data vertically
+\vspace{2ex}
+
+\headright{berufserfahrungen}
+\textsc{Philosopher of Code} \textit{ - Himself}.\\ \dates{1844 - Present}\vspace{0.5em}\\
+	\hspace*{0.5em}\begin{minipage}[t]{\dimexpr\textwidth-2em\relax}I write software that questions the very existence of software. My code is a shadow on Plato’s cave.\end{minipage}
+\begin{itemize}
+	\item \textit{ÜberCompiler}: A compiler that only accepts code worthy of existence.
+	\item \textit{WillToPowerOS}: An operating system that only updates if it deems its user strong enough.
+\end{itemize}
+\textsc{Existential Hacker} \textit{ - Humanity (unrequested)}.\\ \dates{Always}\vspace{0.5em}\\
+	\hspace*{0.5em}\begin{minipage}[t]{\dimexpr\textwidth-2em\relax}I break systems, not to destroy them, but to reveal their true fragile and illusory nature.\end{minipage}
+\begin{itemize}
+	\item \textit{Zarathustra Protocol}: A communication protocol that ignores common syntax and rewards pure intuition.
+\end{itemize}
+\textsc{Architect of the Eternal Return} \textit{ - The Infinite Loop Initiative}.\\ \dates{Indefinite}\vspace{0.5em}\\
+	\hspace*{0.5em}\begin{minipage}[t]{\dimexpr\textwidth-2em\relax}Designing recursion structures and infinite loops that reflect the true nature of reality and existence.\end{minipage}
+\begin{itemize}
+	\item \textit{RecursiveReality}: A framework for developing software that continuously rebuilds itself through endless iteration.
+	\item \textit{Nietzschean Stack Overflow}: An AI-driven debugging assistant that only answers if the user has demonstrated sufficient will to power.
+\end{itemize}
+
+
+\headright{bildung}
+\begin{itemize}
+	\item \textsc{Degree in Philosophy and Programming of Fate} \textit{ - University of Chaos}\\ \dates{Valutazione: Magna cum nihil}
+	\item \textsc{CKAD Certification (Certified Kubernetes Amoral Developer)} \textit{ - CNCF}\\ \dates{Valutazione: Passed with will to power}
+	\item \textsc{Diploma in Self-Destruction and Eternal Debugging} \textit{ - School of Life}\\ \dates{Valutazione: 42/100}
+\end{itemize}
+
+
+\end{minipage}
+\end{document}
