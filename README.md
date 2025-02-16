@@ -1,5 +1,4 @@
-# Automatic CV Generator
-
+# ResuMeow
 Welcome to Reslumeow! An automaic CV generator written in nu.
 
 This brutal script allows you to create a beautifully formatted CV in LaTeX from a simple YAML input file and command-line parameters.
@@ -25,7 +24,7 @@ nu template.nu --input <path_to_input_yaml> --img <path_to_image> --output <outp
 - `--img`: Path to the image file to be included in the CV.
 - `--output`: Path where the generated PDF will be saved.
 - `--color`: (Optional) Hex color code for the CV theme. Default is `304263`.
-- `--language`: (Optional) language to use for the headers. Supported languages are:
+- `--language`: (Optional) language to use for the headers. Default is `eng`. Supported languages are:
   - eng
   - it
   - fr
