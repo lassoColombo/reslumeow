@@ -6,8 +6,10 @@ This brutal script allows you to create a beautifully formatted CV in LaTeX from
 
 <h1 align="center">
   <img src="imgs/mascot.jpg" alt="Local Image">
-  <a href="imgs/example_cv.pdf">View an example</a>
 </h1>
+<h3 align="center">
+  <a href="imgs/example_cv.pdf">View an example</a>
+</h3>
 
 ## Usage
 
